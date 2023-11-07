@@ -1,6 +1,12 @@
-const {Pool} = require('pg')
-//Is what is going to connect to put postgres database
-const pool = new Pool();
-module.exports = {
-    query:(text,params) => pool.query(text,params)
-}
+const Pool = require('pg').Pool
+require('dotenv').config()
+
+const pool = new Pool({
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  host: process.env.PGHOST,
+  port: process.env.DBPORT,
+  database: 'trucking'
+})
+
+module.exports = pool

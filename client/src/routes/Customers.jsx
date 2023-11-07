@@ -14,7 +14,7 @@ function Customers() {
     const fetchData = async () => {
       try {
         //Baseurl is already an axios const, exports the base Url form the Baseurl.js
-        const response = await Baseurl.get("users/customers");
+        const response = await Baseurl.get("/users/customers");
         console.log(response);
         setCustomers(response.data.data.users);
       } catch (error) {

@@ -12,7 +12,7 @@ function Drivers() {
     const fetchData = async () => {
       try {
         //Baseurl is already an axios const, exports the base Url form the Baseurl.js
-        const response = await Baseurl.get("users/drivers");
+        const response = await Baseurl.get("/users/drivers");
         console.log(response);
         setDrivers(response.data.data.users);
       } catch (error) {
@@ -75,7 +75,7 @@ function Drivers() {
                 <tr>
                   <td>{driver.first_name.toUpperCase()}</td>
                   <td>{driver.last_name.toUpperCase()}</td>
-                   <td>{driver._role.toUpperCase()}</td>
+                  <td>{driver._role.toUpperCase()}</td>
                   <td>
                     <button
                       onClick={() => handleDriverSelect(driver.id)}

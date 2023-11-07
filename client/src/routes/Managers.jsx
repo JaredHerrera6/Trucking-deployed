@@ -14,7 +14,7 @@ function Managers() {
     const fetchData = async () => {
       try {
         //Baseurl is already an axios const, exports the base Url form the Baseurl.js
-        const response = await Baseurl.get("users/drivers");
+        const response = await Baseurl.get("/users/drivers");
         console.log(response);
         setDrivers(response.data.data.users);
       } catch (error) {

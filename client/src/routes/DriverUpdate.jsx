@@ -26,7 +26,7 @@ const DriverUpdate = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await Baseurl.get("users/drivers");
+        const response = await Baseurl.get("/users/drivers");
         console.log(response);
         setDrivers(response.data.data.users);
       } catch (error) {

@@ -10,7 +10,7 @@ const HomeUserLists = (props) => {
     const fetchData = async () => {
       try {
         //Baseurl is already an axios const, exports the base Url form the Baseurl.js
-        const response = await Baseurl.get("/users/managers");
+        const response = await Baseurl.get("users/managers");
         setManagers(response.data.data.users);
       } catch (error) {
         console.log(error);
@@ -24,7 +24,7 @@ const HomeUserLists = (props) => {
     const fetchData = async () => {
       try {
         //Baseurl is already an axios const, exports the base Url form the Baseurl.js
-        const response = await Baseurl.get("/users/drivers");
+        const response = await Baseurl.get("users/drivers");
         setDrivers(response.data.data.users);
       } catch (error) {
         console.log(error);
@@ -38,7 +38,7 @@ const HomeUserLists = (props) => {
     const fetchData = async () => {
       try {
         //Baseurl is already an axios const, exports the base Url form the Baseurl.js
-        const response = await Baseurl.get("/users/customers");
+        const response = await Baseurl.get("users/customers");
         setCustomers(response.data.data.users);
       } catch (error) {
         console.log(error);

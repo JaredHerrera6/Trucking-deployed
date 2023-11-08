@@ -11,6 +11,11 @@ import axios from "axios"
 //const BaseURL = process.env.REACT_APP_SERVERURL
 
 export default axios.create({
-    baseURL: process.env.REACT_APP_SERVERURL
+    baseURL: process.env.REACT_APP_SERVERURL,
+    withCredentials: true
+
 })
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.withCredentials = true;
+axios.defaults.crossDomain = true;
 //This Will Serve as our base URL

@@ -8,10 +8,10 @@ import axios from "axios"
 
 //const baseURL = "http://localhost:3005/api/v1"
 
-//const BaseURL = process.env.REACT_APP_SERVERURL
+const baseURL = process.env.REACT_APP_SERVERURL
 
 export default axios.create({
-    baseURL: process.env.REACT_APP_SERVERURL,
+    baseURL,
     withCredentials: true
 
 })

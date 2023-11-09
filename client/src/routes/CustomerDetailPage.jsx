@@ -46,7 +46,7 @@ const CustomerDetailPage = () => {
   return (
     <div>
       <h1 className="display text-decoration-underline">
-        <u>Driver Information</u>
+        <u>Customer Information</u>
       </h1>
       {selectedCustomer && (
         <>

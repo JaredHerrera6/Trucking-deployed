@@ -11,9 +11,7 @@ const HomeUserLists = (props) => {
     const fetchData = async () => {
       try {
         //Baseurl is already an axios const, exports the base Url form the Baseurl.js
-        const response = await axios.get(
-          `${process.env.React_APP_SERVERURL}/users/managers`
-        );
+        const response = await Baseurl.get("users/managers");
         setManagers(response.data.data.users);
       } catch (error) {
         console.log(error);
